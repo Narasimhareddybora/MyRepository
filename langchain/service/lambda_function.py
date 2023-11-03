@@ -12,8 +12,8 @@ def getS3Data(bucket_name, object_key):
     #Extract relevant information from the S3 event
     bucket_name = "datalakemkbgo"
     object_key = "details/customer_focus_form - Aug DFR-1.csv"
-    aws_access_key_id = 'AKIARAWX6HSWP2HNP7P4'
-    aws_secret_access_key = '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'
+    aws_access_key_id = ''
+    aws_secret_access_key = ''
     s3_client = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
 
     try:

@@ -57,7 +57,7 @@ def addSizableColumnData(column_names):
     for s in word_list:
         prompt="I am uploading column names for a file: " + s
         response, session_id = chain.run(
-            api_key="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",
+            api_key="",
             session_id=session_id,
             prompt=prompt
             )
@@ -83,7 +83,7 @@ def getSizeableRows(row_data,session_id):
         else:
             prompt="Hey I am uplaoding rows for a file " + str(row_list)
             response, session_id = chain.run(
-            api_key="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",
+            api_key="",
             session_id=session_id,
             prompt=prompt
             )
@@ -94,7 +94,7 @@ def getSizeableRows(row_data,session_id):
     #if len(rowlist)>0:
         #prompt="Hey I am uplaoding rows for a file " + str(row_list)
         #response, session_id =5481ff25-2a6c-42e1-bd38-01d388f379d2 chain.run(
-        #    api_key="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",
+        #    api_key="",
         #    session_id=session_id,
         #    prompt=prompt
         #    )
@@ -107,7 +107,7 @@ def addRows(row_data, session_id):
         print(data)
         prompt = "I am uploaded the column names now i am uploading rows corresponding         to them for a file " + str(data)
         response, session_id = chain.run(
-            api_key="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",
+            api_key="",
             session_id=session_id,
             prompt=prompt
             )
@@ -135,7 +135,7 @@ def startChat():
         session_id=addSizableColumnData(list_of_column_names)
         prompt="I uploaded the column names of the file. Next i will be uploading each row in form of a list. Please remember it will be row data so the first value will be mapped to first column name, second value will be mapped to second column name and so on."
         response, session_id = chain.run(
-                api_key="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",
+                api_key="",
                 session_id=session_id,
                 prompt=prompt
             )
@@ -155,7 +155,7 @@ def startChat():
         csv_data = getS3Data(bucket_name, object_key)
         prompt="Hi, this is data of a file. Please read it and remember the file data. The data is as follows: " + str(csv_data)
         response, session_id = chain.run(
-                api_key="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",
+                api_key="",
                 session_id=session_id,
                 prompt=prompt
             )
@@ -174,7 +174,7 @@ def startChat():
         
         if prompt.lower() != 'quit':
             response, session_id = chain.run(
-                api_key="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",
+                api_key="",
                 session_id=session_id,
                 prompt=prompt
             )
